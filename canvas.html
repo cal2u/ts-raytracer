@@ -1,0 +1,19 @@
+<html>
+<canvas id="myCanvas" style="width:500px; height:500px; margin-right: 1em;border: 1px solid black; float:left;" width="250" height="250"></canvas>
+<h2>Raytracing Options</h2>
+<form name="renderOptions">
+    Update: <input type="radio" checked="true" id="updateRegular" onclick="useRegularUpdate()" name="updateType">
+        <label for="updateRegular">Top to bottom</label>
+    <input type="radio" id="updateSectioned" onclick="useSectionedUpdate()" name="updateType">
+        <label for="updateSectioned">Independent rows</label>
+    <br>
+    Shading: <input type="radio" id="plain" onclick="usePlain()" name="shadingType">
+        <label for="plain">Plain</label>
+    <input type="radio" id="lambertian" checked="true" onclick="useLambertian()" name="shadingType">
+        <label for="lambertian" >Lambertian</label>
+</form>
+<h3 id="fps"></h3>
+<button id="toggle">Start/Stop</button>
+<script src="built/raytracer.js">
+</script>
+</html>
